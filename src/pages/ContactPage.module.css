@@ -1,0 +1,127 @@
+.ContactPage {
+    width          : 100%;
+    min-height     : 100%;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+.ContactPage .ContactCard {
+    max-width             : 600px;
+    /* background-color   : white; */
+    border-radius         : 20px;
+    padding               : 20px;
+    /* box-shadow         : -7px 5px 16px 1px rgba(56, 86, 122, 0.9); */
+    /* animation          : popIn 0.5s ease-in; */
+    display               : flex;
+    flex-direction        : column;
+    justify-content       : center;
+    align-items           : center;
+}
+
+.ContactPage .ContactCard .ContactHeader {
+    color      : white;
+    font-size  : 2rem;
+    position   : relative;
+    font-weight: bold;
+}
+
+.ContactPage .ContactCard .ContactHeader::before {
+    content      : '';
+    border-bottom: 4px solid white;
+    width        : 150px;
+    margin-top   : 10px;
+    position     : absolute;
+    bottom       : -1rem;
+}
+
+.ContactPage .ContactCard .StaticText {
+    color        : #6dfafb;
+    margin-bottom: 2rem;
+}
+
+.ContactPage .ContactCard .ContactForm {
+    display       : flex;
+    flex-direction: column;
+    row-gap       : 5px;
+    width         : 100%;
+    padding       : 0 10px 20px 10px;
+}
+
+.ContactPage .ContactCard .ContactForm *:is(input),
+.ContactPage .ContactCard .ContactForm textarea {
+    background-color: #1f2229;
+    color           : white;
+    border-radius   : 0px;
+}
+
+.ContactPage .ContactCard .ContactForm textarea {
+    min-height: 100px;
+    width     : 100%;
+    resize    : vertical;
+}
+
+.ContactPage .ContactCard .ContactForm *:is(input):focus,
+.ContactPage .ContactCard .ContactForm textarea:focus {
+    border-color: #6dfafb;
+    outline     : 0;
+    box-shadow  : 0 0 0 0.25rem rgb(109 250 251 / 25%);
+}
+
+@media (min-width: 768px) {
+    .ContactPage .ContactCard .ContactForm textarea {
+        min-width: 500px;
+    }
+}
+
+.ContactPage .ContactCard .ContactForm button {
+    width     : 200px;
+    align-self: end;
+    margin-top: 20px;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.ContactPage .ContactCard .SocialLinks {
+    color      : white;
+    font-size  : 2rem;
+    font-weight: bold;
+    border-top : 1px solid rgba(255, 255, 255, 0.254);
+    position   : relative;
+    margin     : 0px;
+    padding    : 0px;
+    padding-top: 10px;
+    width      : 100%;
+}
+
+/* .ContactPage .ContactCard .SocialLinks::before {
+    content         : '';
+    position        : absolute;
+    background-color: white;
+    color           : rgba(72, 70, 70, 0.6);
+    height          : 22px;
+    width           : 30px;
+    top             : -11px;
+    left            : calc(50% - 15px);
+    font-size       : small;
+    line-height     : 22px;
+} */
+
+.ContactPage .ContactCard .SocialLinks a {
+    font-size       : 22px;
+    width           : 50PX;
+    height          : 50px;
+    /* padding      : 2rem; */
+    color           : white;
+    background-color: #100f0f52;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    overflow        : hidden;
+}
+
+.ContactPage .ContactCard .SocialLinks a:hover,
+.ContactPage .ContactCard .SocialLinks a:active,
+.ContactPage .ContactCard .SocialLinks a:focus-visible {
+    background-color: #0badb3;
+}

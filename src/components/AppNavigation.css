@@ -1,0 +1,50 @@
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: aqua !important;
+}
+
+.navbar .navbar-nav {
+    column-gap: 5px;
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        width: 40%;
+    }
+}
+
+.navbar .nav-item .nav-link {
+    position       : relative;
+    font-weight    : bold;
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color           : white !important;
+    background-color: #0badb3;
+    overflow        : hidden;
+}
+
+.navbar .nav-item .nav-link:hover span,
+.navbar .nav-item .nav-link.active span {
+    animation: rollover 0.5s forwards;
+}
+
+/* .navbar .nav-link::after {
+    content         : '';
+    height          : 3px;
+    position        : absolute;
+    background-color: blue;
+    width           : 0%;
+    left            : 0px;
+    bottom          : 0px;
+    transition      : 0.5s;
+}
+
+.navbar .nav-link:hover:after,
+.navbar .nav-link.active:after {
+    width: 100%;
+} */
